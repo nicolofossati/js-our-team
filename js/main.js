@@ -52,24 +52,43 @@ const team = [
 ];
 
 
-const divDom = document.querySelector("#data_container");
+const divDom = document.querySelector('#container');
 
 for(let i=0; i<team.length; i++){
     const employees = team[i];
     
+    const cardDom = document.createElement('div');
+    cardDom.setAttribute('id', 'card');
+    divDom.appendChild(cardDom);
+
+
     for(let key in employees){
         console.log(employees[key]);
         
-        if(key == "photo"){
+        if(key === "name"){
+            const h2Dom = document.createElement('h2');
+            cardDom.setAttribute('id', 'name');
+            h2Dom.innerHTML = employees[key];
+            cardDom.appendChild(h2Dom);
+        } else if(key === "position"){
+            const h3Dom = document.createElement('h2');
+            cardDom.setAttribute('id', 'position');
+            h3Dom.innerHTML = employees[key];
+            cardDom.appendChild(h3Dom);
+        } else if(key === "photo"){
             const imgDom = document.createElement('img');
+            cardDom.setAttribute('id', 'photo');
             imgDom.src = `img/${employees[key]}`;
-            divDom.appendChild(imgDom);
-        } else {
-            const pDom = document.createElement('p');
-            pDom.innerHTML = employees[key];
-            divDom.appendChild(pDom);
-        }
+            cardDom.appendChild(imgDom);
+        } 
     }
-
-
 }
+/*
+    <div id="container">
+        <div id="card">
+            <h2 id="name">Wayne Barnett</h2>
+            <h3 id="position">Founder & CEO</h3>
+            <img id="photo" src="img/wayne-barnett-founder-ceo.jpg">
+        </div>
+    </div>
+*/

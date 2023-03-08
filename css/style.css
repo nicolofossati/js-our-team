@@ -9,7 +9,7 @@ body{
     background-color: rgb(249, 242, 255);
 }
 
-.test-div{
+#container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -17,7 +17,7 @@ body{
     margin: auto;
 }
 
-.test-card{
+#card{
     background-color: rgb(230, 219, 240);
     width: calc((100% / 3) - 60px);
     padding: 20px;
@@ -25,16 +25,16 @@ body{
     border-radius: 15px;
 }
 
-.test-name{
+#name{
     text-align: center;
 }
 
-.test-pos{
+#position{
     text-align: center;
     padding: 10px 0;
 }
 
-.test-img{
+#photo{
     width: 85%;
     margin: auto;
     display: block;
