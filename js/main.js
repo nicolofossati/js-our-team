@@ -67,17 +67,17 @@ for(let i=0; i<team.length; i++){
         
         if(key === "name"){
             const h2Dom = document.createElement('h2');
-            cardDom.setAttribute('id', 'name');
+            h2Dom.setAttribute('id', 'name');
             h2Dom.innerHTML = employees[key];
             cardDom.appendChild(h2Dom);
         } else if(key === "position"){
-            const h3Dom = document.createElement('h2');
-            cardDom.setAttribute('id', 'position');
+            const h3Dom = document.createElement('h3');
+            h3Dom.setAttribute('id', 'position');
             h3Dom.innerHTML = employees[key];
             cardDom.appendChild(h3Dom);
         } else if(key === "photo"){
             const imgDom = document.createElement('img');
-            cardDom.setAttribute('id', 'photo');
+            imgDom.setAttribute('id', 'photo');
             imgDom.src = `img/${employees[key]}`;
             cardDom.appendChild(imgDom);
         } 
