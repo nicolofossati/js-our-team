@@ -4,3 +4,39 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
+
+body{
+    background-color: rgb(249, 242, 255);
+}
+
+.test-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+.test-card{
+    background-color: rgb(230, 219, 240);
+    width: calc((100% / 3) - 60px);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.test-name{
+    text-align: center;
+}
+
+.test-pos{
+    text-align: center;
+    padding: 10px 0;
+}
+
+.test-img{
+    width: 85%;
+    margin: auto;
+    display: block;
+    border-radius: 5px;
+}
