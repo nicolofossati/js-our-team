@@ -60,6 +60,29 @@ const team = [
     }
 ];
 
-for(let key in team){
-    console.log(team[key]);
+
+const divDom = document.querySelector("#data_container");
+
+for(let i=0; i<team.length; i++){
+    const employees = team[i];
+    
+    for(let key in employees){
+        console.log(employees[key]);
+        
+        const pDom = document.createElement('p');
+        pDom.innerHTML = employees[key];
+        divDom.appendChild(pDom);
+    }
+
+
+}
+
+
+
+
+function print_arrayObject(array){
+    for(let key in array){
+        console.log(array[key]);
+    }
+    
 }
