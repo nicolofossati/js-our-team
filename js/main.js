@@ -69,9 +69,15 @@ for(let i=0; i<team.length; i++){
     for(let key in employees){
         console.log(employees[key]);
         
-        const pDom = document.createElement('p');
-        pDom.innerHTML = employees[key];
-        divDom.appendChild(pDom);
+        if(key == "photo"){
+            const imgDom = document.createElement('img');
+            imgDom.src = `img/${employees[key]}`;
+            divDom.appendChild(imgDom);
+        } else {
+            const pDom = document.createElement('p');
+            pDom.innerHTML = employees[key];
+            divDom.appendChild(pDom);
+        }
     }
 
 
